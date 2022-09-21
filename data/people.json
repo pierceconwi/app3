@@ -1,0 +1,20 @@
+[
+    {
+        "name": "April Applesauce",
+        "email": "april@ibesaucin.com",
+        "friends": 3,
+        "id": 1
+    },
+    {
+        "name": "Bernard Basil",
+        "email": "bernie@basilfans.net",
+        "friends": 2,
+        "id": 2
+    },
+    {
+        "name": "Charles Cherry-Tomatoes",
+        "email": "c.cherry-tomatoes@notaveg.org",
+        "friends": 1,
+        "id": 3
+    }
+]
