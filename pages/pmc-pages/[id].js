@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import styles from '../../styles/Home.module.css';
 import { getAllIds, getData } from '../../lib/data';
 import { getSortedList } from '../../lib/data';
@@ -29,13 +30,25 @@ export async function getStaticPaths() {
 }
 
 // make a React.js component to display all details about a person when a dynamic route matches
-export default function Entry( { itemData, secondData } ) {
+export default function Entry( { itemData, secondData, firstData } ) {
     return (
         <main class="card col-6">
             <div class="card-body">
                 <h5 class="card-title">{itemData.name}</h5>
                 <a href={'mailto:'+itemData.email} class="card-link">{itemData.email}</a>
                 <p>Best friend: {secondData[itemData.id-1].friend_name}</p>
+                <p class="text-center">---</p>
+
+                {/* use map method to render associated data */}
+                
+         
+                {
+                    secondData.map(({ friend_name }) => (
+                        <p>{secondData[itemData.id-1].friend_name}</p>
+                        )
+                    )
+                }
+        
             </div>
                     <a class="btn btn-primary mt-3" href='../'>Back to Home</a>
             </main>
