@@ -17,7 +17,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home({ firstData, secondData }) {
+export default function Home({ firstData }) {
   return (
     <Layout>
     <h1>People Food</h1>
@@ -32,4 +32,4 @@ export default function Home({ firstData, secondData }) {
     </div>
     </Layout>
   )
-}
+}  

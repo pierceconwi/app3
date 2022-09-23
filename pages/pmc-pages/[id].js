@@ -1,9 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../../styles/Home.module.css';
-import { getAllIds, getData } from '../../lib/data';
-import { getSortedList } from '../../lib/data';
-import { getSortedList2 } from '../../lib/data';
+import { getAllIds, getData, getSortedList, getSortedList2 } from '../../lib/data';
 import Layout from '../../components/layout.js';
 
 // create an instance of the getStaticProps() to return data for one person
@@ -39,15 +37,18 @@ export default function Entry( { itemData, secondData, firstData } ) {
                 <p>Best friend: {secondData[itemData.id-1].friend_name}</p>
                 <p class="text-center">---</p>
 
-                {/* use map method to render associated data */}
-                
+                {/* use map method to render associated data from otherpeople.json */}
+                <h6>Attempt To Map Best Friend:</h6>
+                <br></br>
          
-                {
+                { 
                     secondData.map(({ friend_name }) => (
-                        <p>{secondData[itemData.id-1].friend_name}</p>
-                        )
-                    )
-                }
+                        <p>{friend_name}</p>
+                        /*<p>{friend_name[id]}</p>*/
+                        /*<p>{item.friend_name}</p>*/
+                        /*<p>{secondData[{id}].friend_name}</p>*/
+                    ))
+                    }
         
             </div>
                     <a class="btn btn-primary mt-3" href='../'>Back to Home</a>

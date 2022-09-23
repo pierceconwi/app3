@@ -9,12 +9,7 @@ export default function Layout( { children, home }) {
                 <title>Pierce's Next.js App</title>
             </Head>
             <main>{children}
-            {!home && (
-                <Link href='/'>
-                    <a class="btn btn-primary mt-3">Back to Home</a>
-                </Link>
-            )
-            }</main>
+            {!home}</main>
         </div>
     )
 }
