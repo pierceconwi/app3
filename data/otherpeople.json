@@ -1,17 +1,14 @@
 [
     {
-        "name": "Doug Donuts",
-        "email": "ddawg@istealdonuts.com",
-        "id": 4
+        "friend_name": "Doug Donuts",
+        "id": 1
     },
     {
-        "name": "Eddie Eggs",
-        "email": "eggy@eggs.egg",
-        "id": 5
+        "friend_name": "Eddie Eggs",
+        "id": 2
     },
     {
-        "name": "Franklin French-Fries",
-        "email": "f.f-f@fffff.gov",
-        "id": 6
+        "friend_name": "Franklin French-Fries",
+        "id": 3
     }
 ]

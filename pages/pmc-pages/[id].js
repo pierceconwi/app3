@@ -29,29 +29,15 @@ export async function getStaticPaths() {
 }
 
 // make a React.js component to display all details about a person when a dynamic route matches
-export default function Entry( { itemData, firstData, secondData } ) {
-    // find friend value (corresponds to otherpeople.json) for current person selected in people.json and bind it to variable
-    const abc1 = itemData.friends;
-    console.log(abc1);
+export default function Entry( { itemData, secondData } ) {
     return (
         <main class="card col-6">
             <div class="card-body">
                 <h5 class="card-title">{itemData.name}</h5>
                 <a href={'mailto:'+itemData.email} class="card-link">{itemData.email}</a>
+                <p>Best friend: {secondData[itemData.id-1].friend_name}</p>
             </div>
                     <a class="btn btn-primary mt-3" href='../'>Back to Home</a>
-            <div className="list-group col-6">
-            <p>Associates:</p>
-            {/* check for friends within people.json and map related data */}
-                {itemData.friends.map(
-                        ({ id, name }) => {
-                            <Link key={id} href={'/${id}'}>
-                                <a className="list-group-item list-group-item-action">{name}</a>
-                            </Link>
-                        }
-                    )
-                }
-            </div>
             </main>
     );
 }
