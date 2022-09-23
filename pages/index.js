@@ -7,7 +7,8 @@ import Link from 'next/link';
 import Layout from '../components/layout.js';
 
 export async function getStaticProps() {
-
+  const firstData = getSortedList();
+  const secondData = getSortedList2();
   return {
     props: {
       firstData,

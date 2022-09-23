@@ -4,7 +4,6 @@ import { getAllIds, getData } from '../../lib/data';
 import { getSortedList } from '../../lib/data';
 import { getSortedList2 } from '../../lib/data';
 import Layout from '../../components/layout.js';
-import $ from 'jquery';
 
 // create an instance of the getStaticProps() to return data for one person
 export async function getStaticProps({ params }) {
