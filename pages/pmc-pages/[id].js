@@ -44,9 +44,6 @@ export default function Entry( { itemData, secondData, firstData } ) {
                 { 
                     secondData.map(({ friend_name }) => (
                         <p>{friend_name}</p>
-                        /*<p>{friend_name[id]}</p>*/
-                        /*<p>{item.friend_name}</p>*/
-                        /*<p>{secondData[{id}].friend_name}</p>*/
                     ))
                     }
         

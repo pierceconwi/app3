@@ -10,6 +10,7 @@
     "test": "jest --watchAll"
   },
   "dependencies": {
+    "firebase-admin": "10.3",
     "identity-obj-proxy": "^3.0.0",
     "jquery": "^3.6.1",
     "next": "12.3.0",
